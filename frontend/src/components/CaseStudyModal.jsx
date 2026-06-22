@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { X, Play, Clock, ArrowUpRight } from "lucide-react";
+import { X, Clock, ArrowUpRight } from "lucide-react";
 
 export const CaseStudyModal = ({ project, onClose, onBookCall }) => {
   useEffect(() => {
@@ -24,7 +24,7 @@ export const CaseStudyModal = ({ project, onClose, onBookCall }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed inset-0 z-[100] bg-zinc-900/40 backdrop-blur-md flex items-start md:items-center justify-center p-3 md:p-8 overflow-y-auto"
+          className="fixed inset-0 z-[100] bg-zinc-900/55 backdrop-blur-md flex items-start md:items-center justify-center p-3 md:p-8 overflow-y-auto"
           onClick={onClose}
         >
           <motion.div
@@ -32,129 +32,75 @@ export const CaseStudyModal = ({ project, onClose, onBookCall }) => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.98 }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-5xl my-4 bg-zinc-50 border border-zinc-900/10 rounded-2xl overflow-hidden"
+            className="relative w-full max-w-6xl my-4 bg-white border border-zinc-900/10 rounded-2xl overflow-hidden shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close */}
             <button
               data-testid="case-study-close-btn"
               onClick={onClose}
-              className="absolute top-5 right-5 z-20 h-10 w-10 rounded-full bg-white/90 border border-zinc-900/10 hover:border-zinc-900/30 hover:bg-white text-zinc-900 flex items-center justify-center transition-all shadow-sm"
+              className="absolute top-5 right-5 z-30 h-10 w-10 rounded-full bg-white/95 border border-zinc-900/10 hover:border-zinc-900/30 hover:bg-white text-zinc-900 flex items-center justify-center transition-all shadow-sm"
               aria-label="Close case study"
             >
               <X size={16} />
             </button>
 
-            {/* Hero of modal */}
-            <div className="relative aspect-[16/9] md:aspect-[16/7] overflow-hidden">
-              <img
-                src={project.thumbnail}
-                alt={project.title}
-                className="absolute inset-0 h-full w-full object-cover opacity-75"
+            {/* Vimeo player — cinematic hero */}
+            <div className="relative aspect-video bg-zinc-900">
+              <iframe
+                data-testid="case-study-player"
+                src={`https://player.vimeo.com/video/${project.vimeoId}?title=0&byline=0&portrait=0&dnt=1`}
+                title={project.title}
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 h-full w-full"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-50 via-zinc-50/70 to-transparent" />
-              <div className="absolute inset-0 grid-overlay opacity-30 mix-blend-overlay" />
+            </div>
 
-              <div className="absolute inset-x-0 bottom-0 p-6 md:p-10">
-                <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.24em] text-zinc-900/55">
-                  <span className="inline-flex items-center gap-1.5 rounded-full border border-zinc-900/15 bg-white/85 backdrop-blur px-3 py-1">
-                    <Clock size={11} /> {project.duration}
+            {/* Title strip */}
+            <div className="px-6 md:px-12 pt-10 md:pt-14">
+              <div className="flex flex-wrap items-center gap-3 text-[11px] uppercase tracking-[0.24em] text-zinc-900/55">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-zinc-900/12 bg-zinc-50 px-3 py-1">
+                  <Clock size={11} /> {project.duration}
+                </span>
+                {project.tags.map((t) => (
+                  <span
+                    key={t}
+                    className="rounded-full border border-zinc-900/10 bg-zinc-50 px-3 py-1 text-zinc-900/65 normal-case tracking-normal text-[11px]"
+                  >
+                    {t}
                   </span>
-                  <span>{project.tag}</span>
-                </div>
-                <h2
-                  data-testid="case-study-title"
-                  className="font-heading mt-4 text-3xl md:text-5xl tracking-[-0.02em] font-medium"
-                >
-                  {project.title}
-                </h2>
+                ))}
               </div>
+
+              <h2
+                data-testid="case-study-title"
+                className="font-heading mt-6 text-3xl md:text-5xl lg:text-6xl tracking-[-0.025em] font-medium leading-[1.05]"
+              >
+                {project.title}
+              </h2>
+
+              <p className="mt-6 max-w-2xl text-zinc-900/65 text-base md:text-[17px] leading-relaxed">
+                {project.description}
+              </p>
             </div>
 
             <div className="px-6 md:px-12 py-12 md:py-16 space-y-14">
-              <Section eyebrow="01 — Overview" title="What this project is">
-                <p>{project.caseStudy.overview}</p>
+              <Section eyebrow="01 — Overview" title="About this project">
+                <p>{project.overview}</p>
               </Section>
 
-              <Section eyebrow="02 — Objective" title="Why it exists">
-                <p>{project.caseStudy.objective}</p>
-              </Section>
-
-              <Section eyebrow="03 — Storyboard" title="Beat by beat">
-                <ol className="space-y-3">
-                  {project.caseStudy.storyboard.map((s, i) => (
-                    <li
-                      key={i}
-                      className="flex gap-4 text-zinc-900/65 text-base leading-relaxed"
-                    >
-                      <span className="text-[#3B82F6] font-mono text-sm pt-0.5">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <span>{s}</span>
-                    </li>
-                  ))}
-                </ol>
-              </Section>
-
-              <Section eyebrow="04 — Design Frames" title="Key visual moments">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {project.caseStudy.designFrames.map((frame, i) => (
-                    <div
-                      key={i}
-                      className="rounded-xl border border-zinc-900/8 bg-zinc-100 aspect-[16/10] flex flex-col items-start justify-end p-5 relative overflow-hidden"
-                    >
-                      <div className="absolute inset-0 grid-overlay opacity-30" />
-                      <div
-                        className="absolute -top-12 -right-12 h-40 w-40 rounded-full opacity-25 blur-3xl"
-                        style={{ background: project.accent }}
-                      />
-                      <span className="relative text-[10px] uppercase tracking-[0.22em] text-zinc-900/45">
-                        Frame {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <p className="relative mt-1 text-sm text-zinc-900/80">
-                        {frame}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </Section>
-
-              <Section eyebrow="05 — Motion Process" title="How it was animated">
-                <p>{project.caseStudy.motionProcess}</p>
-              </Section>
-
-              <Section eyebrow="06 — Final Video" title="The piece in motion">
-                <div className="relative rounded-2xl overflow-hidden border border-zinc-900/8 aspect-video bg-zinc-50 flex items-center justify-center">
-                  <div className="absolute inset-0 grid-overlay opacity-30" />
-                  <div className="relative flex flex-col items-center gap-4 text-center px-6">
-                    <span
-                      className="h-16 w-16 rounded-full border border-zinc-900/15 flex items-center justify-center bg-zinc-900"
-                      style={{ boxShadow: `0 0 60px ${project.accent}40` }}
-                    >
-                      <Play size={20} className="text-white ml-0.5" />
-                    </span>
-                    <p className="font-heading text-xl tracking-tight">
-                      Video coming soon
-                    </p>
-                    <p className="text-sm text-zinc-900/45 max-w-md">
-                      The final render is being prepared. Want a preview right now?
-                      Book a discovery call and I&apos;ll walk you through it live.
-                    </p>
-                  </div>
-                </div>
-              </Section>
-
-              <Section eyebrow="07 — Key Learnings" title="What this project taught me">
-                <p>{project.caseStudy.keyLearnings}</p>
+              <Section eyebrow="02 — Takeaway" title="What I learned making it">
+                <p>{project.keyLearnings}</p>
               </Section>
 
               <div className="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 border-t border-zinc-900/5">
                 <div className="max-w-md">
                   <p className="font-heading text-xl tracking-tight">
-                    Have a similar project in mind?
+                    Want something like this for your product?
                   </p>
-                  <p className="text-sm text-zinc-900/50 mt-1">
-                    Let&apos;s talk about how motion can carry your product story.
+                  <p className="text-sm text-zinc-900/55 mt-1">
+                    Let&apos;s talk about how motion can carry your story.
                   </p>
                 </div>
                 <button
