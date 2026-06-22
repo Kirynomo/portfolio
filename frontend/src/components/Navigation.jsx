@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { LOGO_URL } from "@/data/brand";
 
 const links = [
   { id: "work", label: "Work" },
@@ -39,10 +40,18 @@ export const Navigation = ({ onBookCall }) => {
         <button
           data-testid="nav-logo"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="font-heading text-[15px] tracking-tight font-medium text-zinc-900"
+          className="flex items-center gap-2.5 font-heading text-[15px] tracking-tight font-medium text-zinc-900"
         >
-          Harshit<span className="text-[#3B82F6]">.</span>
-          <span className="text-zinc-900/50 font-normal ml-1">MadeIt</span>
+          <img
+            src={LOGO_URL}
+            alt="Harshit MadeIt logo"
+            className="h-7 w-auto select-none"
+            draggable={false}
+          />
+          <span className="flex items-center">
+            Harshit<span className="text-[#3B82F6]">.</span>
+            <span className="text-zinc-900/50 font-normal ml-1">MadeIt</span>
+          </span>
         </button>
 
         <nav className="hidden md:flex items-center gap-9">

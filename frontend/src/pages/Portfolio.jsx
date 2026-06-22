@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Toaster } from "sonner";
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
@@ -7,6 +7,7 @@ import { CaseStudyModal } from "@/components/CaseStudyModal";
 import { Services } from "@/components/Services";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { LoadingScreen } from "@/components/LoadingScreen";
 
 const CALENDLY_URL = ""; // optional Calendly URL; empty falls back to contact scroll
 const CONTACT_EMAIL = "harshitmadeit@gmail.com";
@@ -20,6 +21,12 @@ const SOCIALS = [
 
 export default function Portfolio() {
   const [activeProject, setActiveProject] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const t = setTimeout(() => setLoading(false), 1400);
+    return () => clearTimeout(t);
+  }, []);
 
   const scrollToContact = () => {
     const el = document.getElementById("contact");
@@ -41,6 +48,7 @@ export default function Portfolio() {
 
   return (
     <div className="relative min-h-screen bg-white text-zinc-900 selection:bg-blue-600/40">
+      <LoadingScreen visible={loading} />
       <Toaster
         position="bottom-right"
         theme="light"

@@ -1,3 +1,5 @@
+import { LOGO_URL } from "@/data/brand";
+
 export const Footer = ({ email, socials }) => {
   const year = new Date().getFullYear();
   return (
@@ -6,6 +8,12 @@ export const Footer = ({ email, socials }) => {
       className="relative border-t border-zinc-900/5 py-12 md:py-16"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <img
+          src={LOGO_URL}
+          alt="Harshit MadeIt logo"
+          className="h-8 w-auto select-none mb-8"
+          draggable={false}
+        />
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-10">
           <div>
             <div className="font-heading text-2xl md:text-3xl tracking-tight font-medium leading-tight max-w-xl">
