@@ -24,7 +24,7 @@ export const CaseStudyModal = ({ project, onClose, onBookCall }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed inset-0 z-[100] bg-black/85 backdrop-blur-md flex items-start md:items-center justify-center p-3 md:p-8 overflow-y-auto"
+          className="fixed inset-0 z-[100] bg-zinc-900/40 backdrop-blur-md flex items-start md:items-center justify-center p-3 md:p-8 overflow-y-auto"
           onClick={onClose}
         >
           <motion.div
@@ -32,14 +32,14 @@ export const CaseStudyModal = ({ project, onClose, onBookCall }) => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.98 }}
             transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-5xl my-4 bg-[#0A0A0A] border border-white/10 rounded-2xl overflow-hidden"
+            className="relative w-full max-w-5xl my-4 bg-zinc-50 border border-zinc-900/10 rounded-2xl overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close */}
             <button
               data-testid="case-study-close-btn"
               onClick={onClose}
-              className="absolute top-5 right-5 z-20 h-10 w-10 rounded-full bg-black/60 border border-white/10 hover:border-white/30 hover:bg-black/80 flex items-center justify-center transition-all"
+              className="absolute top-5 right-5 z-20 h-10 w-10 rounded-full bg-white/90 border border-zinc-900/10 hover:border-zinc-900/30 hover:bg-white text-zinc-900 flex items-center justify-center transition-all shadow-sm"
               aria-label="Close case study"
             >
               <X size={16} />
@@ -52,12 +52,12 @@ export const CaseStudyModal = ({ project, onClose, onBookCall }) => {
                 alt={project.title}
                 className="absolute inset-0 h-full w-full object-cover opacity-75"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/50 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-50 via-zinc-50/70 to-transparent" />
               <div className="absolute inset-0 grid-overlay opacity-30 mix-blend-overlay" />
 
               <div className="absolute inset-x-0 bottom-0 p-6 md:p-10">
-                <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.24em] text-white/55">
-                  <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-black/50 backdrop-blur px-3 py-1">
+                <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.24em] text-zinc-900/55">
+                  <span className="inline-flex items-center gap-1.5 rounded-full border border-zinc-900/15 bg-white/85 backdrop-blur px-3 py-1">
                     <Clock size={11} /> {project.duration}
                   </span>
                   <span>{project.tag}</span>
@@ -85,7 +85,7 @@ export const CaseStudyModal = ({ project, onClose, onBookCall }) => {
                   {project.caseStudy.storyboard.map((s, i) => (
                     <li
                       key={i}
-                      className="flex gap-4 text-white/65 text-base leading-relaxed"
+                      className="flex gap-4 text-zinc-900/65 text-base leading-relaxed"
                     >
                       <span className="text-[#3B82F6] font-mono text-sm pt-0.5">
                         {String(i + 1).padStart(2, "0")}
@@ -101,17 +101,17 @@ export const CaseStudyModal = ({ project, onClose, onBookCall }) => {
                   {project.caseStudy.designFrames.map((frame, i) => (
                     <div
                       key={i}
-                      className="rounded-xl border border-white/8 bg-[#111111] aspect-[16/10] flex flex-col items-start justify-end p-5 relative overflow-hidden"
+                      className="rounded-xl border border-zinc-900/8 bg-zinc-100 aspect-[16/10] flex flex-col items-start justify-end p-5 relative overflow-hidden"
                     >
                       <div className="absolute inset-0 grid-overlay opacity-30" />
                       <div
                         className="absolute -top-12 -right-12 h-40 w-40 rounded-full opacity-25 blur-3xl"
                         style={{ background: project.accent }}
                       />
-                      <span className="relative text-[10px] uppercase tracking-[0.22em] text-white/45">
+                      <span className="relative text-[10px] uppercase tracking-[0.22em] text-zinc-900/45">
                         Frame {String(i + 1).padStart(2, "0")}
                       </span>
-                      <p className="relative mt-1 text-sm text-white/80">
+                      <p className="relative mt-1 text-sm text-zinc-900/80">
                         {frame}
                       </p>
                     </div>
@@ -124,19 +124,19 @@ export const CaseStudyModal = ({ project, onClose, onBookCall }) => {
               </Section>
 
               <Section eyebrow="06 — Final Video" title="The piece in motion">
-                <div className="relative rounded-2xl overflow-hidden border border-white/8 aspect-video bg-[#0E0E10] flex items-center justify-center">
+                <div className="relative rounded-2xl overflow-hidden border border-zinc-900/8 aspect-video bg-zinc-50 flex items-center justify-center">
                   <div className="absolute inset-0 grid-overlay opacity-30" />
                   <div className="relative flex flex-col items-center gap-4 text-center px-6">
                     <span
-                      className="h-16 w-16 rounded-full border border-white/15 flex items-center justify-center bg-black/60"
+                      className="h-16 w-16 rounded-full border border-zinc-900/15 flex items-center justify-center bg-zinc-900"
                       style={{ boxShadow: `0 0 60px ${project.accent}40` }}
                     >
-                      <Play size={20} className="text-white/80 ml-0.5" />
+                      <Play size={20} className="text-white ml-0.5" />
                     </span>
                     <p className="font-heading text-xl tracking-tight">
                       Video coming soon
                     </p>
-                    <p className="text-sm text-white/45 max-w-md">
+                    <p className="text-sm text-zinc-900/45 max-w-md">
                       The final render is being prepared. Want a preview right now?
                       Book a discovery call and I&apos;ll walk you through it live.
                     </p>
@@ -148,12 +148,12 @@ export const CaseStudyModal = ({ project, onClose, onBookCall }) => {
                 <p>{project.caseStudy.keyLearnings}</p>
               </Section>
 
-              <div className="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 border-t border-white/5">
+              <div className="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 border-t border-zinc-900/5">
                 <div className="max-w-md">
                   <p className="font-heading text-xl tracking-tight">
                     Have a similar project in mind?
                   </p>
-                  <p className="text-sm text-white/50 mt-1">
+                  <p className="text-sm text-zinc-900/50 mt-1">
                     Let&apos;s talk about how motion can carry your product story.
                   </p>
                 </div>
@@ -163,7 +163,7 @@ export const CaseStudyModal = ({ project, onClose, onBookCall }) => {
                     onClose();
                     onBookCall();
                   }}
-                  className="group inline-flex items-center gap-2 rounded-full bg-white text-black hover:bg-white/90 transition-colors px-6 py-3 text-sm font-medium"
+                  className="group inline-flex items-center gap-2 rounded-full bg-zinc-900 text-white hover:bg-zinc-800 transition-colors px-6 py-3 text-sm font-medium"
                 >
                   Book a Discovery Call
                   <ArrowUpRight
@@ -183,14 +183,14 @@ export const CaseStudyModal = ({ project, onClose, onBookCall }) => {
 const Section = ({ eyebrow, title, children }) => (
   <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-10">
     <div className="md:col-span-4">
-      <div className="text-[10px] uppercase tracking-[0.28em] text-white/40">
+      <div className="text-[10px] uppercase tracking-[0.28em] text-zinc-900/40">
         {eyebrow}
       </div>
       <h3 className="font-heading mt-3 text-2xl tracking-tight font-medium">
         {title}
       </h3>
     </div>
-    <div className="md:col-span-8 text-white/65 text-base leading-relaxed">
+    <div className="md:col-span-8 text-zinc-900/65 text-base leading-relaxed">
       {children}
     </div>
   </div>

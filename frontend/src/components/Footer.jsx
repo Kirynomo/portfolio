@@ -3,7 +3,7 @@ export const Footer = ({ email, socials }) => {
   return (
     <footer
       data-testid="site-footer"
-      className="relative border-t border-white/5 py-12 md:py-16"
+      className="relative border-t border-zinc-900/5 py-12 md:py-16"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-10">
@@ -13,7 +13,7 @@ export const Footer = ({ email, socials }) => {
             </div>
             <a
               href={`mailto:${email}`}
-              className="inline-block mt-5 text-sm text-white/55 hover:text-white transition-colors"
+              className="inline-block mt-5 text-sm text-zinc-900/55 hover:text-zinc-900 transition-colors"
             >
               {email}
             </a>
@@ -26,7 +26,7 @@ export const Footer = ({ email, socials }) => {
                 href={s.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xs uppercase tracking-[0.24em] text-white/45 hover:text-white transition-colors"
+                className="text-xs uppercase tracking-[0.24em] text-zinc-900/45 hover:text-zinc-900 transition-colors"
               >
                 {s.label}
               </a>
@@ -34,7 +34,7 @@ export const Footer = ({ email, socials }) => {
           </div>
         </div>
 
-        <div className="mt-14 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-white/35">
+        <div className="mt-14 pt-6 border-t border-zinc-900/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs text-zinc-900/35">
           <span>© {year} Harshit MadeIt. All rights reserved.</span>
           <span>Designed & animated by Harshit.</span>
         </div>

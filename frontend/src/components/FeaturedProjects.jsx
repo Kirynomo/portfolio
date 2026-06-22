@@ -40,7 +40,7 @@ const ProjectCard = ({ project, index, onOpen, span }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.9, delay: index * 0.08, ease: [0.16, 1, 0.3, 1] }}
-      className={`group relative overflow-hidden rounded-2xl border border-white/5 bg-[#0A0A0A] hover-lift hover:border-white/15 ${span}`}
+      className={`group relative overflow-hidden rounded-2xl border border-zinc-900/5 bg-zinc-50 hover-lift hover:border-zinc-900/15 ${span}`}
     >
       <button
         onClick={onOpen}
@@ -54,22 +54,22 @@ const ProjectCard = ({ project, index, onOpen, span }) => {
             className="absolute inset-0 h-full w-full object-cover opacity-80 group-hover:opacity-95 group-hover:scale-[1.04] transition-all duration-700"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-white via-white/30 to-transparent" />
 
           {/* Coming soon badge */}
-          <div className="absolute top-5 left-5 flex items-center gap-2 rounded-full bg-black/60 backdrop-blur-md border border-white/10 px-3 py-1.5 text-[10px] uppercase tracking-[0.22em] text-white/70">
+          <div className="absolute top-5 left-5 flex items-center gap-2 rounded-full bg-white/90 backdrop-blur-md border border-zinc-900/10 px-3 py-1.5 text-[10px] uppercase tracking-[0.22em] text-zinc-900/70 shadow-sm">
             <span className="h-1.5 w-1.5 rounded-full bg-[#3B82F6] animate-pulse" />
             Video coming soon
           </div>
 
           {/* Duration */}
-          <div className="absolute top-5 right-5 flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur-md border border-white/10 px-3 py-1.5 text-[11px] text-white/80">
+          <div className="absolute top-5 right-5 flex items-center gap-1.5 rounded-full bg-white/90 backdrop-blur-md border border-zinc-900/10 px-3 py-1.5 text-[11px] text-zinc-900/80 shadow-sm">
             <Clock size={11} />
             {project.duration}
           </div>
 
           {/* Tag */}
-          <div className="absolute bottom-5 left-5 text-[10px] uppercase tracking-[0.28em] text-white/55">
+          <div className="absolute bottom-5 left-5 text-[10px] uppercase tracking-[0.28em] text-zinc-900/55">
             {project.tag}
           </div>
         </div>
@@ -78,18 +78,18 @@ const ProjectCard = ({ project, index, onOpen, span }) => {
           <h3 className="font-heading text-2xl md:text-3xl tracking-tight font-medium">
             {project.title}
           </h3>
-          <p className="text-white/55 text-sm md:text-base leading-relaxed max-w-xl">
+          <p className="text-zinc-900/55 text-sm md:text-base leading-relaxed max-w-xl">
             {project.description}
           </p>
           <div className="flex items-center justify-between pt-2">
-            <span className="inline-flex items-center gap-2 text-sm text-white/80 group-hover:text-white transition-colors">
+            <span className="inline-flex items-center gap-2 text-sm text-zinc-900/80 group-hover:text-zinc-900 transition-colors">
               View Project
               <ArrowUpRight
                 size={16}
                 className="transition-transform duration-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
               />
             </span>
-            <span className="text-xs text-white/30">
+            <span className="text-xs text-zinc-900/30">
               0{index + 1} / 0{projects.length}
             </span>
           </div>
@@ -103,7 +103,7 @@ export const SectionHeader = ({ eyebrow, title, description, align = "left" }) =
   <div
     className={`max-w-3xl ${align === "center" ? "mx-auto text-center" : ""}`}
   >
-    <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.28em] text-white/45">
+    <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.28em] text-zinc-900/45">
       <span className="h-px w-8 bg-white/20" />
       {eyebrow}
     </div>
@@ -111,7 +111,7 @@ export const SectionHeader = ({ eyebrow, title, description, align = "left" }) =
       {title}
     </h2>
     {description && (
-      <p className="mt-5 text-white/55 text-base md:text-[17px] leading-relaxed max-w-2xl">
+      <p className="mt-5 text-zinc-900/55 text-base md:text-[17px] leading-relaxed max-w-2xl">
         {description}
       </p>
     )}

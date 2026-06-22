@@ -1,8 +1,8 @@
 /* Component-level overrides for the Harshit MadeIt portfolio */
 .App {
     min-height: 100vh;
-    background-color: #050505;
-    color: #f4f4f5;
+    background-color: #ffffff;
+    color: #18181b;
 }
 
 /* Smooth focus rings, accessible but minimal */

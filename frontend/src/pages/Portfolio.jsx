@@ -42,15 +42,15 @@ export default function Portfolio() {
   };
 
   return (
-    <div className="relative min-h-screen bg-[#050505] text-white selection:bg-blue-600/40">
+    <div className="relative min-h-screen bg-white text-zinc-900 selection:bg-blue-600/40">
       <Toaster
         position="bottom-right"
-        theme="dark"
+        theme="light"
         toastOptions={{
           style: {
-            background: "#0A0A0A",
-            border: "1px solid rgba(255,255,255,0.08)",
-            color: "#F4F4F5",
+            background: "#FFFFFF",
+            border: "1px solid rgba(0,0,0,0.08)",
+            color: "#18181B",
             fontFamily: "Manrope, sans-serif",
           },
         }}

@@ -57,7 +57,7 @@ export const Contact = ({ onBookCall, email, socials }) => {
     <section
       data-testid="contact-section"
       id="contact"
-      className="relative py-24 md:py-32 border-t border-white/5"
+      className="relative py-24 md:py-32 border-t border-zinc-900/5"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
@@ -68,14 +68,14 @@ export const Contact = ({ onBookCall, email, socials }) => {
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-5"
           >
-            <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.28em] text-white/45">
+            <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.28em] text-zinc-900/45">
               <span className="h-px w-8 bg-white/20" />
               Contact
             </div>
             <h2 className="font-heading mt-5 text-3xl sm:text-4xl md:text-5xl tracking-[-0.025em] leading-[1.05] font-medium">
               Let&apos;s give your product the motion it deserves.
             </h2>
-            <p className="mt-6 text-white/55 text-base md:text-[17px] leading-relaxed max-w-md">
+            <p className="mt-6 text-zinc-900/55 text-base md:text-[17px] leading-relaxed max-w-md">
               Tell me about your project. I&apos;ll reply within one business day with
               next steps or a calendar link to chat.
             </p>
@@ -84,17 +84,17 @@ export const Contact = ({ onBookCall, email, socials }) => {
               <button
                 data-testid="contact-book-call-btn"
                 onClick={onBookCall}
-                className="group w-full sm:w-auto inline-flex items-center justify-between gap-6 rounded-2xl border border-white/10 bg-[#0A0A0A] hover:border-white/25 transition-colors duration-300 px-6 py-5 text-left"
+                className="group w-full sm:w-auto inline-flex items-center justify-between gap-6 rounded-2xl border border-zinc-900/10 bg-zinc-50 hover:border-zinc-900/25 transition-colors duration-300 px-6 py-5 text-left"
               >
                 <span className="flex items-center gap-4">
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04]">
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-zinc-900/10 bg-zinc-100">
                     <Calendar size={16} />
                   </span>
                   <span>
                     <span className="block text-sm font-medium">
                       Book a Discovery Call
                     </span>
-                    <span className="block text-xs text-white/45 mt-0.5">
+                    <span className="block text-xs text-zinc-900/45 mt-0.5">
                       30 minutes · Free · Calendly
                     </span>
                   </span>
@@ -108,15 +108,15 @@ export const Contact = ({ onBookCall, email, socials }) => {
               <a
                 data-testid="contact-email-link"
                 href={`mailto:${email}`}
-                className="group w-full sm:w-auto inline-flex items-center justify-between gap-6 rounded-2xl border border-white/10 bg-[#0A0A0A] hover:border-white/25 transition-colors duration-300 px-6 py-5"
+                className="group w-full sm:w-auto inline-flex items-center justify-between gap-6 rounded-2xl border border-zinc-900/10 bg-zinc-50 hover:border-zinc-900/25 transition-colors duration-300 px-6 py-5"
               >
                 <span className="flex items-center gap-4">
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04]">
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-zinc-900/10 bg-zinc-100">
                     <Mail size={16} />
                   </span>
                   <span>
                     <span className="block text-sm font-medium">{email}</span>
-                    <span className="block text-xs text-white/45 mt-0.5">
+                    <span className="block text-xs text-zinc-900/45 mt-0.5">
                       Or write directly
                     </span>
                   </span>
@@ -136,7 +136,7 @@ export const Contact = ({ onBookCall, email, socials }) => {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs uppercase tracking-[0.24em] text-white/45 hover:text-white transition-colors"
+                  className="text-xs uppercase tracking-[0.24em] text-zinc-900/45 hover:text-zinc-900 transition-colors"
                 >
                   {s.label}
                 </a>
@@ -151,7 +151,7 @@ export const Contact = ({ onBookCall, email, socials }) => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-7 rounded-3xl border border-white/8 bg-[#0A0A0A] p-7 md:p-10 relative overflow-hidden"
+            className="lg:col-span-7 rounded-3xl border border-zinc-900/8 bg-zinc-50 p-7 md:p-10 relative overflow-hidden"
           >
             <div className="absolute -top-32 -right-32 h-72 w-72 rounded-full bg-[radial-gradient(closest-side,rgba(37,99,235,0.18),transparent)] pointer-events-none" />
 
@@ -225,7 +225,7 @@ export const Contact = ({ onBookCall, email, socials }) => {
               />
 
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
-                <p className="text-xs text-white/40 max-w-sm">
+                <p className="text-xs text-zinc-900/40 max-w-sm">
                   By submitting, you agree to be contacted about your project.
                   No spam, no list — just a real reply.
                 </p>
@@ -233,7 +233,7 @@ export const Contact = ({ onBookCall, email, socials }) => {
                   type="submit"
                   data-testid="contact-submit-btn"
                   disabled={submitting}
-                  className="group inline-flex items-center gap-2 rounded-full bg-white text-black hover:bg-white/90 disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-300 px-7 py-3.5 text-sm font-medium min-w-[180px] justify-center"
+                  className="group inline-flex items-center gap-2 rounded-full bg-zinc-900 text-white hover:bg-zinc-800 disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-300 px-7 py-3.5 text-sm font-medium min-w-[180px] justify-center"
                 >
                   {submitting ? (
                     <>
@@ -263,35 +263,35 @@ export const Contact = ({ onBookCall, email, socials }) => {
 
 const Field = ({ label, testid, ...props }) => (
   <label className="block">
-    <span className="block text-[10px] uppercase tracking-[0.24em] text-white/40 mb-2">
+    <span className="block text-[10px] uppercase tracking-[0.24em] text-zinc-900/40 mb-2">
       {label}
     </span>
     <input
       data-testid={testid}
       {...props}
-      className="w-full bg-transparent border-b border-white/10 focus:border-white/40 text-white placeholder-white/25 py-3 text-sm md:text-base outline-none transition-colors"
+      className="w-full bg-transparent border-b border-zinc-900/10 focus:border-zinc-900/40 text-zinc-900 placeholder-zinc-400 py-3 text-sm md:text-base outline-none transition-colors"
     />
   </label>
 );
 
 const SelectField = ({ label, testid, options, ...props }) => (
   <label className="block">
-    <span className="block text-[10px] uppercase tracking-[0.24em] text-white/40 mb-2">
+    <span className="block text-[10px] uppercase tracking-[0.24em] text-zinc-900/40 mb-2">
       {label}
     </span>
     <div className="relative">
       <select
         data-testid={testid}
         {...props}
-        className="w-full appearance-none bg-transparent border-b border-white/10 focus:border-white/40 text-white py-3 text-sm md:text-base outline-none transition-colors pr-8"
+        className="w-full appearance-none bg-transparent border-b border-zinc-900/10 focus:border-zinc-900/40 text-zinc-900 py-3 text-sm md:text-base outline-none transition-colors pr-8"
       >
         {options.map((o) => (
-          <option key={o.value} value={o.value} className="bg-[#0A0A0A]">
+          <option key={o.value} value={o.value} className="bg-zinc-50">
             {o.label}
           </option>
         ))}
       </select>
-      <span className="pointer-events-none absolute right-1 top-1/2 -translate-y-1/2 text-white/40 text-xs">
+      <span className="pointer-events-none absolute right-1 top-1/2 -translate-y-1/2 text-zinc-900/40 text-xs">
         ▾
       </span>
     </div>
@@ -300,14 +300,14 @@ const SelectField = ({ label, testid, options, ...props }) => (
 
 const TextAreaField = ({ label, testid, ...props }) => (
   <label className="block">
-    <span className="block text-[10px] uppercase tracking-[0.24em] text-white/40 mb-2">
+    <span className="block text-[10px] uppercase tracking-[0.24em] text-zinc-900/40 mb-2">
       {label}
     </span>
     <textarea
       data-testid={testid}
       rows={5}
       {...props}
-      className="w-full bg-transparent border-b border-white/10 focus:border-white/40 text-white placeholder-white/25 py-3 text-sm md:text-base outline-none resize-none transition-colors"
+      className="w-full bg-transparent border-b border-zinc-900/10 focus:border-zinc-900/40 text-zinc-900 placeholder-zinc-400 py-3 text-sm md:text-base outline-none resize-none transition-colors"
     />
   </label>
 );

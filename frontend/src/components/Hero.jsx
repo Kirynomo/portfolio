@@ -18,7 +18,7 @@ export const Hero = ({ onBookCall, onViewWork }) => {
     >
       {/* Backdrop */}
       <div className="absolute inset-0 -z-10 grid-overlay opacity-60" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-transparent to-[#050505]" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-transparent to-white" />
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 -z-10 h-[420px] w-[820px] rounded-full bg-[radial-gradient(closest-side,rgba(37,99,235,0.18),transparent)]" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -27,7 +27,7 @@ export const Hero = ({ onBookCall, onViewWork }) => {
           custom={0}
           initial="hidden"
           animate="show"
-          className="flex items-center gap-2 text-[11px] uppercase tracking-[0.28em] text-white/50"
+          className="flex items-center gap-2 text-[11px] uppercase tracking-[0.28em] text-zinc-900/50"
         >
           <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#3B82F6] shadow-[0_0_12px_rgba(59,130,246,0.9)]" />
           Motion Designer · Startups & SaaS
@@ -43,7 +43,7 @@ export const Hero = ({ onBookCall, onViewWork }) => {
         >
           Motion design for
           <br className="hidden sm:block" /> startups that
-          <span className="text-white/40"> need </span>
+          <span className="text-zinc-900/40"> need </span>
           <span className="relative inline-block">
             attention
             <span className="absolute -bottom-1 left-0 h-[3px] w-full bg-gradient-to-r from-[#2563EB] via-[#3B82F6] to-transparent" />
@@ -57,7 +57,7 @@ export const Hero = ({ onBookCall, onViewWork }) => {
           custom={2}
           initial="hidden"
           animate="show"
-          className="mt-8 max-w-2xl text-white/60 text-base md:text-lg leading-relaxed"
+          className="mt-8 max-w-2xl text-zinc-900/60 text-base md:text-lg leading-relaxed"
         >
           I help SaaS products and modern tech brands communicate clearly through
           motion — turning dense product stories into crisp, cinematic animations
@@ -74,7 +74,7 @@ export const Hero = ({ onBookCall, onViewWork }) => {
           <button
             data-testid="hero-book-call-btn"
             onClick={onBookCall}
-            className="group inline-flex items-center gap-2 rounded-full bg-white text-black hover:bg-white/90 transition-all duration-300 px-7 py-4 text-sm font-medium"
+            className="group inline-flex items-center gap-2 rounded-full bg-zinc-900 text-white hover:bg-zinc-800 transition-all duration-300 px-7 py-4 text-sm font-medium"
           >
             Book a Discovery Call
             <ArrowUpRight
@@ -85,7 +85,7 @@ export const Hero = ({ onBookCall, onViewWork }) => {
           <button
             data-testid="hero-view-work-btn"
             onClick={onViewWork}
-            className="group inline-flex items-center gap-2 rounded-full bg-transparent text-white border border-white/15 hover:border-white/40 transition-colors duration-300 px-7 py-4 text-sm font-medium"
+            className="group inline-flex items-center gap-2 rounded-full bg-transparent text-zinc-900 border border-zinc-900/15 hover:border-zinc-900/40 transition-colors duration-300 px-7 py-4 text-sm font-medium"
           >
             <Play size={14} className="opacity-80" />
             View Work
@@ -98,12 +98,12 @@ export const Hero = ({ onBookCall, onViewWork }) => {
           custom={4}
           initial="hidden"
           animate="show"
-          className="mt-20 flex flex-col md:flex-row md:items-end gap-8 md:gap-16 border-t border-white/5 pt-10"
+          className="mt-20 flex flex-col md:flex-row md:items-end gap-8 md:gap-16 border-t border-zinc-900/5 pt-10"
         >
           <Stat label="Years in motion" value="6+" testid="hero-stat-years" />
           <Stat label="Frames animated" value="120k" testid="hero-stat-frames" />
           <Stat label="Avg. project length" value="14 days" testid="hero-stat-length" />
-          <div className="ml-auto text-xs text-white/40 max-w-xs leading-relaxed">
+          <div className="ml-auto text-xs text-zinc-900/40 max-w-xs leading-relaxed">
             Trusted by founders building the next generation of SaaS, dev tools
             and AI products.
           </div>
@@ -116,7 +116,7 @@ export const Hero = ({ onBookCall, onViewWork }) => {
 const Stat = ({ label, value, testid }) => (
   <div data-testid={testid}>
     <div className="font-heading text-3xl md:text-4xl tracking-tight">{value}</div>
-    <div className="text-[11px] uppercase tracking-[0.22em] text-white/45 mt-2">
+    <div className="text-[11px] uppercase tracking-[0.22em] text-zinc-900/45 mt-2">
       {label}
     </div>
   </div>

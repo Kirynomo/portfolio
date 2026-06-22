@@ -39,7 +39,7 @@ export const Process = () => {
     <section
       data-testid="process-section"
       id="process"
-      className="relative py-24 md:py-32 border-t border-white/5"
+      className="relative py-24 md:py-32 border-t border-zinc-900/5"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <SectionHeader
@@ -66,18 +66,18 @@ export const Process = () => {
                 className="relative"
               >
                 <div className="flex items-center gap-3">
-                  <span className="relative h-[18px] w-[18px] rounded-full border border-white/20 bg-[#050505] flex items-center justify-center">
+                  <span className="relative h-[18px] w-[18px] rounded-full border border-zinc-900/20 bg-white flex items-center justify-center">
                     <span className="h-2 w-2 rounded-full bg-[#3B82F6]" />
                   </span>
-                  <span className="font-mono text-xs text-white/45">
+                  <span className="font-mono text-xs text-zinc-900/45">
                     0{idx + 1}
                   </span>
                 </div>
                 <h3 className="font-heading mt-6 text-xl tracking-tight font-medium">
                   {step.label}
                 </h3>
-                <p className="text-sm text-white/55 mt-2">{step.summary}</p>
-                <p className="text-xs text-white/35 mt-4 leading-relaxed">
+                <p className="text-sm text-zinc-900/55 mt-2">{step.summary}</p>
+                <p className="text-xs text-zinc-900/35 mt-4 leading-relaxed">
                   {step.detail}
                 </p>
               </motion.div>
