@@ -4,7 +4,6 @@ import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { FeaturedProjects } from "@/components/FeaturedProjects";
 import { CaseStudyModal } from "@/components/CaseStudyModal";
-import { About } from "@/components/About";
 import { Services } from "@/components/Services";
 import { Process } from "@/components/Process";
 import { Contact } from "@/components/Contact";
@@ -63,7 +62,6 @@ export default function Portfolio() {
         <Hero onBookCall={handleBookCall} onViewWork={scrollToWork} />
         <MarqueeBar />
         <FeaturedProjects onOpenCase={setActiveProject} />
-        <About />
         <Services />
         <Process />
         <Contact

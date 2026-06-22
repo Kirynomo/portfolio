@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 
 const links = [
   { id: "work", label: "Work" },
-  { id: "about", label: "About" },
   { id: "services", label: "Services" },
   { id: "process", label: "Process" },
   { id: "contact", label: "Contact" },
