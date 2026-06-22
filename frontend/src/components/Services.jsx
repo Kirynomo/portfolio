@@ -46,7 +46,7 @@ export const Services = () => {
     <section
       data-testid="services-section"
       id="services"
-      className="relative py-24 md:py-32 border-t border-zinc-900/5"
+      className="relative py-20 md:py-24 border-t border-zinc-900/5"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <SectionHeader
@@ -55,7 +55,7 @@ export const Services = () => {
           description="No generalist menu. Just the motion deliverables that move the needle for product-led companies."
         />
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           {services.map((service, idx) => (
             <ServiceCard key={service.title} {...service} index={idx} />
           ))}

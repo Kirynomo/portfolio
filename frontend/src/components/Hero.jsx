@@ -14,7 +14,7 @@ export const Hero = ({ onBookCall, onViewWork }) => {
   return (
     <section
       data-testid="hero-section"
-      className="relative isolate overflow-hidden pt-36 pb-32 md:pt-44 md:pb-40"
+      className="relative isolate overflow-hidden pt-28 pb-10 md:pt-32 md:pb-14"
     >
       {/* Backdrop */}
       <div className="absolute inset-0 -z-10 grid-overlay opacity-60" />
@@ -39,7 +39,7 @@ export const Hero = ({ onBookCall, onViewWork }) => {
           custom={1}
           initial="hidden"
           animate="show"
-          className="font-heading mt-8 text-[44px] sm:text-6xl lg:text-7xl xl:text-[88px] leading-[0.98] tracking-[-0.035em] font-medium max-w-5xl"
+          className="font-heading mt-6 text-[44px] sm:text-6xl lg:text-7xl xl:text-[88px] leading-[0.98] tracking-[-0.035em] font-medium max-w-5xl"
         >
           Motion design for
           <br className="hidden sm:block" /> startups that
@@ -57,7 +57,7 @@ export const Hero = ({ onBookCall, onViewWork }) => {
           custom={2}
           initial="hidden"
           animate="show"
-          className="mt-8 max-w-2xl text-zinc-900/60 text-base md:text-lg leading-relaxed"
+          className="mt-6 max-w-2xl text-zinc-900/60 text-base md:text-lg leading-relaxed"
         >
           I help SaaS products and modern tech brands communicate clearly through
           motion — turning dense product stories into crisp, cinematic animations
@@ -69,7 +69,7 @@ export const Hero = ({ onBookCall, onViewWork }) => {
           custom={3}
           initial="hidden"
           animate="show"
-          className="mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-4"
+          className="mt-9 flex flex-col sm:flex-row items-start sm:items-center gap-4"
         >
           <button
             data-testid="hero-book-call-btn"

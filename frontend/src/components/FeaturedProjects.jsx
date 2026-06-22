@@ -8,7 +8,7 @@ export const FeaturedProjects = ({ onOpenCase }) => {
     <section
       data-testid="work-section"
       id="work"
-      className="relative py-24 md:py-32"
+      className="relative pt-8 pb-20 md:pt-12 md:pb-24"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <SectionHeader
@@ -17,7 +17,7 @@ export const FeaturedProjects = ({ onOpenCase }) => {
           description="Each project is a study in how startups and modern brands can use animation to communicate value, not decoration."
         />
 
-        <div className="mt-16 grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <div className="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-6">
           {projects.map((project, idx) => (
             <ProjectCard
               key={project.id}

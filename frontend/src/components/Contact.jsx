@@ -57,7 +57,7 @@ export const Contact = ({ onBookCall, email, socials }) => {
     <section
       data-testid="contact-section"
       id="contact"
-      className="relative py-24 md:py-32 border-t border-zinc-900/5"
+      className="relative py-20 md:py-24 border-t border-zinc-900/5"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
