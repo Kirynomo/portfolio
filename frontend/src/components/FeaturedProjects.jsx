@@ -24,7 +24,7 @@ export const FeaturedProjects = ({ onOpenCase }) => {
               project={project}
               index={idx}
               onOpen={() => onOpenCase(project)}
-              span={idx === 0 ? "lg:col-span-7" : idx === 1 ? "lg:col-span-5" : "lg:col-span-12"}
+              span="lg:col-span-6"
             />
           ))}
         </div>
