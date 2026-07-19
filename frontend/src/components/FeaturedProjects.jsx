@@ -13,7 +13,7 @@ export const FeaturedProjects = ({ onOpenCase }) => {
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <SectionHeader
           eyebrow="Selected Work"
-          title="Three films. One obsession with motion."
+          title="Six films. One obsession with motion."
           description="Each project is a study in how startups and modern brands can use animation to communicate value, not decoration."
         />
 
