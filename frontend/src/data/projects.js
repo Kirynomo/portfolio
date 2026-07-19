@@ -66,7 +66,7 @@ export const projects = [
     vimeoId: "1211122611",
     tags: ["Spec Film", "Fintech", "Banking Rails"],
     description: "A 30-second spec film for a YC-backed stablecoin payments API, reframing traditional banking rail concepts into a modern, visual payment story.",
-    thumbnail: "https://i.vimeocdn.com/video/2181224681-d086d444f021ef135652ec4b07eddd503d2539829250d1abe73f3cb12bcf5491-d_295x166?region=us",
+    thumbnail: "https://i.vimeocdn.com/video/2181224681-d086d444f021ef135652ec4b07eddd503d2539829250d1abe73f3cb12bcf5491-d_1280x720?region=us",
     overview: "Built to translate the familiar language of traditional banking rails into BlindPay's stablecoin infrastructure, making an unfamiliar payment model feel immediately understandable.",
     accent: "#2563EB",
     keyLearnings: "A study in translating legacy financial concepts into new infrastructure — bridging what founders already trust with what they're being asked to adopt.",
