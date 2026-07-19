@@ -47,5 +47,41 @@ export const projects = [
     keyLearnings:
       "Big-tech polish comes from the easing curves, not the effects. When every transition lands on the same cubic-bezier, the product itself starts to feel inevitable.",
   },
+  {
+    id: "amabrik-security-scanner",
+    title: "Amabrik Product Film",
+    duration: "0:30",
+    vimeoId: "1211122612",
+    tags: ["Launch Film", "SaaS Security", "UI Animation"],
+    description: "A 30-second launch/promo film for a website security scanner, focused on UI animation that shows what Amabrik actually does — not just motion for its own sake.",
+    thumbnail: "https://i.vimeocdn.com/video/2181224533-b4d21594aa082faf8b6bc2445f95102df423ba0ff181090938cbb829b3b16ffd-d_1280x720?region=us",
+    overview: "Built as unsolicited spec work, this film prioritizes clarity over spectacle: every animation exists to explain the product's real function, aimed at a founder audience that can spot decoration from substance.",
+    accent: "#8669fa",
+    keyLearnings: "A discipline exercise in restraint — using UI animation to communicate function first, with polish as a byproduct rather than the point.",
+  }, 
+  {
+    id: "blindpay-payments-api",
+    title: "BlindPay Product Film",
+    duration: "0:30",
+    vimeoId: "1211122611",
+    tags: ["Spec Film", "Fintech", "Banking Rails"],
+    description: "A 30-second spec film for a YC-backed stablecoin payments API, reframing traditional banking rail concepts into a modern, visual payment story.",
+    thumbnail: "https://i.vimeocdn.com/video/2181224681-d086d444f021ef135652ec4b07eddd503d2539829250d1abe73f3cb12bcf5491-d_295x166?region=us",
+    overview: "Built to translate the familiar language of traditional banking rails into BlindPay's stablecoin infrastructure, making an unfamiliar payment model feel immediately understandable.",
+    accent: "#2563EB",
+    keyLearnings: "A study in translating legacy financial concepts into new infrastructure — bridging what founders already trust with what they're being asked to adopt.",
+  },
+  {
+    id: "arzon-global-edtech",
+    title: "Arzon Global Product Film",
+    duration: "0:75",
+    vimeoId: "1211122610",
+    tags: ["Explainer", "EdTech", "Minimal"],
+    description: "A 75-second minimal, professional explainer for an edtech and workforce development platform, built on restraint rather than visual flourish.",
+    thumbnail: "https://i.vimeocdn.com/video/2181223355-beb1a3c1f6dbe028a3da6318d171a0b015fc30f05e609502fe66c026bd0d86d2-d_1280x720?region=us",
+    overview: "A longer-form explainer that leans into a clean, professional register — letting the product's structure carry the story instead of heavy motion effects.",
+    accent: "#a4ddf5",
+    keyLearnings: "A study in minimalism as a design choice, not a limitation — proving restraint can hold attention across a longer runtime."
+  },
 ];
 
